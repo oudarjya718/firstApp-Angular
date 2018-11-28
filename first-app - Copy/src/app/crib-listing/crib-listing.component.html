@@ -1,0 +1,64 @@
+<!-- <div *ngFor="let crib of cribs" class="col-sm-4">
+  <img src="assets/images/{{ crib.image }}.jpg">
+  <h3>{{ crib.address }}</h3>
+  <h4>{{ crib.price }}</h4>
+  <p>{{ crib.type }}</p>
+</div> -->
+
+<div class="row">
+ <div *ngFor="let crib of cribs" class="col-sm-4">
+     <app-crib-card [crib]="crib" class="col-sm-4"></app-crib-card>
+  </div>
+</div>
+
+<!-- <image src="https://images.unsplash.com/photo-1524082983062-21c24967d6c9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0a1532b84f66efdf63f7af7b1f0493f5&auto=format&fit=crop&w=500&q=60" ></image> -->
+  <!-- <img [src]="crib.image"> -->
+
+
+  <!-- <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="col-sm-4">
+              <label for="sort-field">Sort By</label>
+              <select 
+                class="form-control" 
+                name="sort-field" 
+                id="sort-field" 
+                [(ngModel)]="sortField">
+                <option 
+                  *ngFor="let field of sortFields" 
+                  [value]="field">
+                    {{ utilService.capitalize(field) }}
+                  </option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <label for="sort-direction">Sort Direction</label>
+              <div>
+                
+                <button 
+                  class="btn btn-primary"
+                  [ngClass]="{'btn-success': sortDirection == 'asc'}"
+                  (click)="sortDirection = 'asc'">
+                    Asc
+                </button>
+    
+                <button
+                  class="btn btn-primary"
+                  [ngClass]="{'btn-success': sortDirection == 'desc'}"
+                  (click)="sortDirection = 'desc'">
+                    Desc
+                </button>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div *ngFor="let crib of cribs | sortBy: [sortField, sortDirection]">
+        <app-crib-card [crib]="crib" class="col-sm-3"></app-crib-card>
+      </div>
+      <div class="alert alert-danger" *ngIf="error">{{ error }}</div>
+    </div> -->

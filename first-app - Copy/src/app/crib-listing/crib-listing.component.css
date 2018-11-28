@@ -1,0 +1,15 @@
+.card {
+    min-height: 380px;
+}
+
+.col-sm-4 {
+    margin-top: 15px;
+}
+
+h4{
+    margin: 0px;
+}
+
+.btn-primary{
+    margin-top: 4px;
+}
